@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>탭 메뉴</title>
+  
+  <!-- style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- //style -->
+  
+</head>
+<body>
+  <div id="wrap">
+    <header id="header" class="clearfix">
+      <h1>로고</h1>
+      <nav>메뉴</nav>
+    </header>
+    <!-- //header -->
+    
+    <section id="banner">
+      <h2>이미지 슬라이드</h2>
+    </section>
+    <!-- //banner -->
+    
+    <section id="contents" class="clearfix">
+      <article class="notice">
+        <ul class="clearfix">
+          <li class="active">
+            <a href="#">공지사항</a>
+            <ul>
+              <li>
+                <a href="#" class="layers">2019 드림산업 채용공고입니다.</a>
+                <span>2019-02-12</span>
+              </li>
+              <li>
+                <a href="#">드림산업 우수직원 발표 안내</a>
+                <span>2017-09-28</span>
+              </li>
+              <li>
+                <a href="#">드림산업 홈페이지 개편 안내</a>
+                <span>2015-04-23</span>
+              </li>
+              <li>
+                <a href="#">드림산업 제8대 사장 취임식 안내</a>
+                <span>2013-07-02</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">갤러리</a>
+            <ul class="gallery">
+              <li>
+                <a href="#">
+                  <img src="images/g01.jpg" alt="gallery01">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/g02.jpg" alt="gallery02">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/g03.jpg" alt="gallery03">
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <article class="link">
+        <h2>배너</h2>
+      </article>
+      <article class="icon">
+        <h2>바로가기</h2>
+      </article>
+    </section>
+    <!-- //contents -->
+    
+    <footer id="footer" class="clearfix">
+      <h2>푸터</h2>
+    </footer>
+    <!-- //footer -->
+    
+  </div>
+  <!-- //wrap -->
+  
+  <!-- script -->
+  <script src="script/jquery-1.12.4.min.js"></script>
+  <script>
+    // 탭 메뉴
+    var tabMenu = $(".notice");
+    
+    tabMenu.find("ul > li > ul").hide();
+    tabMenu.find("ul > li.active > ul").show();
+    
+    function tabList(e){
+      e.preventDefault();
+      
+      var target = $(this);
+      
+      target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+    };
+    
+    tabMenu.find("ul > li > a").click(tabList).focus(tabList);
+  </script>
+  <!-- //script -->
+  
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>메뉴</title>
+  
+  <!-- style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- //style -->
+  
+</head>
+<body>
+  <div id="wrap">
+    <header id="header" class="clearfix">
+      <h1>
+        <a href="#">
+          <img src="images/logo.png" alt="대한상사">
+        </a>
+      </h1>
+      <nav class="nav">
+        <ul class="clearfix">
+          <li>
+            <a href="#">공지사항</a>
+            <ul class="submenu">
+              <li>
+                <a href="#">사내공지</a>
+              </li>
+              <li>
+                <a href="#">외부공지</a>
+              </li>
+              <li>
+                <a href="#">상담자료</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">개인상담</a>
+            <ul class="submenu">
+              <li>
+                <a href="#">상담문의</a>
+              </li>
+              <li>
+                <a href="#">상담자료실</a>
+              </li>
+              <li>
+                <a href="#">상담내용</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">자료실</a>
+            <ul class="submenu">
+              <li>
+                <a href="#">서식자료실</a>
+              </li>
+              <li>
+                <a href="#">사진자료실</a>
+              </li>
+              <li>
+                <a href="#">각종양식</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">질의응답</a>
+            <ul class="submenu">
+              <li>
+                <a href="#">1:1문의</a>
+              </li>
+              <li>
+                <a href="#">단체문의</a>
+              </li>
+              <li>
+                <a href="#">외부상담</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <section class="subarea"></section>
+    </header>
+    <!-- //header -->
+    
+    <section id="banner">
+      <h2>이미지 슬라이드</h2>
+    </section>
+    <!-- //banner -->
+    
+    <section id="contents" class="clearfix">
+      <article class="notice">
+        <h2>공지사항</h2>
+      </article>
+      <article class="gallery">
+        <h2>갤러리</h2>
+      </article>
+      <article class="link">
+        <h2>배너</h2>
+      </article>
+    </section>
+    <!-- //contents -->
+    
+    <footer id="footer" class="clearfix">
+      <h2>푸터</h2>
+    </footer>
+    <!-- //footer -->
+    
+  </div>
+  <!-- //wrap -->
+  
+  <!-- script -->
+  <script src="script/jquery-1.12.4.min.js"></script>
+  <script>
+//    // 네비게이션(유형1)
+//    $('.nav > ul > li').mouseover(function(){
+//      $('.nav > ul > li > .submenu').stop().slideDown();
+//    });
+//    $('.nav > ul > li').mouseleave(function(){
+//      $('.nav > ul > li > .submenu').stop().slideUp();
+//    });
+    
+//    // 네비게이션 (유형2)
+//    $('.nav > ul > li').mouseover(function(){
+//      $(this).find('.submenu').stop().slideDown();
+//    });
+//    $('.nav > ul > li').mouseleave(function(){
+//      $(this).find('.submenu').stop().slideUp();
+//    });
+    
+    // 네비게이션 (유형3)
+    $('.nav > ul > li').mouseover(function(){
+      $('.nav > ul > li > .submenu').stop().slideDown();
+      $('.subarea').stop().show();
+    });
+    $('.nav > ul > li').mouseleave(function(){
+      $('.nav > ul > li > .submenu').stop().slideUp();
+      $('.subarea').stop().hide();
+    });
+  </script>
+  <!-- //script -->
+  
+</body>
+</html>

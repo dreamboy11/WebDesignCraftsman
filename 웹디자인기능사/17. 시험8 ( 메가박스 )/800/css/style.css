@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/*reset*/
+* {margin: 0; padding: 0;}
+a {color: #141622; text-decoration: none;}
+li {list-style: none;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/*layout*/
+#wrap {width: 1200px; margin: 0 auto;}
+#header {width: 1200px; height: 100px;}
+#banner {width: 1200px; height: 300px;}
+#contents {width: 1200px; height: 200px;}
+#footer {width: 1200px; height: 100px;}
+
+/*header*/
+#header h1 {float: left; padding-top: 30px;}
+#header h1 img {}
+#header .nav {float: right;}
+#header .nav ul {padding: 40px 20px;}
+#header .nav ul li {position: relative; float: left; margin-right: 30px;}
+#header .nav ul li a {display: block; font-size: 20px; font-weight: bold; text-align: center; transition: 0.3s;}
+#header .nav ul li a:hover {background: #56268b; color: #ffffff;}
+#header .nav ul li ul.submenu {display: none; position: absolute; left: -45px; top: 20px; width: 200px; height: 200px; z-index: 100;}
+#header .nav ul li ul.submenu li {padding: 20px 30px;}
+#header .nav ul li ul.submenu li a {display: block; font-size: 12px; font-weight: normal; transition: 0.3s;}
+#header .nav ul li ul.submenu li a:hover {background: #141622; color: #ffffff;}
+
+/*banner*/
+#banner {height: 300px; overflow: hidden;}
+#banner img {width: 100%; display: block;}
+
+/*slideList*/
+.slideList {width: 3600px; position: relative;}
+.slideList .slideImg {position: relative; width: 1200px; float: left;}
+.slideList .slideImg h2 {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding: 10px 30px; background: rgba(0, 0, 0, 0.5); color: #ffffff; border-radius: 25px;}
+
+/*contents*/
+#contents .notice {float: left; width: 32.3333%; margin-right: 1%;}
+#contents .link {float: left; width: 32.3333%; margin-right: 1%;}
+#contents .icon {float: left; width: 32.3333%; margin-right: 1%;}
+
+/*notice*/
+.notice {padding-top: 20px;}
+.notice ul {position: relative;}
+.notice ul li {position: relative; float: left; width: 100%;}
+.notice ul li.active {transition: 0.3s;}
+.notice ul li.active:hover {color: #56268b; font-weight: bold;}
+.notice ul li.gallery {position: absolute; left: 0; top: 0;}
+.notice ul li.gallery a {padding-left: 100px;}
+.notice ul li a {font-size: 20px;}
+.notice ul li ul {padding-top: 10px;}
+.notice ul li ul li {float: left; width: 80%; line-height: 20px;}
+.notice ul li ul li a {font-size: 12px;}
+.notice ul li ul li a.layers {transition: 0.3s;}
+.notice ul li ul li a.layers:hover {color: #141622; font-weight: bold;}
+.notice ul li ul li span {font-size: 8px;}
+.notice ul li ul.nag {display: none; position: absolute; left: -15px; top: 30px; background: #ffffff; width: 250px; height: 140px; z-index: 100; padding-top: 10px;}
+.notice ul li ul.nag li {float: left; width: 31.3333%; margin-right: 2%;}
+.notice ul li ul.nag li a {display: block; padding: 50px 30px;}
+.notice ul li ul.nag li img {width: 30px;}
+
+/*link*/
+.link {padding-top: 50px;}
+.link ul {}
+.link ul li {float: left; width: 48%; margin-right: 2%;}
+.link ul li a {display: block; text-align: center;}
+.link ul li img {width: 60px; transition: 0.3s;}
+.link ul li img:hover {opacity: 0.8;}
+.link ul li span {display: block; padding-top: 15px;}
+
+/*icon*/
+.icon {padding-top: 30px;}
+.icon ul {padding-left: 80px;}
+.icon ul li {float: left; width: 23%; margin-right: 2%;}
+.icon ul li:nth-child(2) {margin-right: 150px;}
+.icon ul li a {display: block; text-align: center;}
+.icon ul li img {width: 60px; padding-top: 5px;}
+.icon ul li span {display: block; padding-top: 15px; font-size: 12px;}
+
+/*footer*/
+#footer h2 {float: left; padding: 30px 20px;}
+#footer h2 img {}
+#footer .foot {padding-top: 30px; width: 60%; padding-right: 100px;}
+#footer .foot ul {}
+#footer .foot ul li {float: left; margin-right: 3px;}
+#footer .foot ul li a {}
+#footer .foot address {font-style: normal; line-height: 30px;}
+
+/*layer*/
+.layer {display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; padding: 10px 30px; background: #ffffff; border: 2px solid #000000;}
+.layer h2 {padding: 30px; font-size: 24px; font-weight: bold; text-align: center; color: #56268b;}
+.layer p {padding: 50px; font-size: 16px; color: #141622; line-height: 30px;}
+.layer .close {position: absolute; bottom: 20px; right: 20px; font-size: 20px;}

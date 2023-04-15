@@ -1,0 +1,77 @@
+/*reset*/
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #333333;}
+li{list-style: none;}
+.clearfix::before, .clearfix::after {content: ''; display: block; clear: both;}
+
+/*layout*/
+#wrap {width: 1000px; margin: 0 auto; height: 1000px; padding-top: 50px;}
+#aside {float: left; width: 300px;}
+#contents {float: left; width: 700px;}
+#footer {float: left; width: 100%; background: #edf2f8;}
+
+/*
+aside(down)
+#aside h1 {margin-bottom: 30px;}
+#aside h1 img {width: 150px;}
+#aside .nav {}
+#aside .nav li {padding-bottom: 5px;}
+#aside .nav li a {font-size: 23px;}
+#aside .nav li a:hover {text-decoration: underline;}
+#aside .nav li.active a {color: blueviolet;}
+#aside .nav li ul.submenu {display: none;}
+#aside .nav li ul.submenu li {}
+#aside .nav li ul.submenu li a {font-size: 20px;}
+#aside .nav li ul.submenu li a:hover {text-decoration: none;}
+*/
+
+/*aside(
+sideways)*/
+#aside h1 {margin-bottom: 30px;}
+#aside h1 img {width: 150px;}
+#aside .nav {}
+#aside .nav li {position: relative; padding-bottom: 5px; background: #f1f1f1; padding: 10px;}
+#aside .nav li a {font-size: 23px;}
+#aside .nav li a:hover {text-decoration: underline;}
+#aside .nav li.active a {color: blueviolet;}
+#aside .nav li ul.submenu {display: none; width: 150px; position: absolute; right: -140px; top: 0; z-index: 1000;}
+#aside .nav li ul.submenu li {}
+#aside .nav li ul.submenu li a {font-size: 20px;}
+#aside .nav li ul.submenu li a:hover {text-decoration: none;}
+
+/*banner*/
+.banner {height: 350px; overflow: hidden;}
+.banner img {width: 100%; display: block;}
+.slideList {width: 1000px; position: relative;}
+.slideList .slideImg {position: absolute; left: 0; top: 0;}
+.slideList .slideImg h2 {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(0, 0, 0, 0.5); padding: 10px 30px; border-radius: 25px;}
+
+/*tab*/
+.tab {padding: 40px 0; height: 200px; position: relative;}
+.tab img {width: 100px;}
+.tab ul {text-align: center;}
+.tab ul li {display: inline; padding: 5px; box-sizing: border-box;}
+.tab ul li a {font-size: 14px; color: #999999;}
+.tab ul li ul {position: absolute; left: 0; top: 100px; width: 100%;}
+.tab ul li ul li {width: 20%; float: left;}
+.tab ul li ul li a {}
+.tab ul li ul li a span {display: block;}
+.tab ul li.active a {color: #000000;}
+
+/*layer*/
+.layer {background: #f7f7f7; padding: 15px;}
+.layer > div {position: relative; float: left; width: 32%; padding: 6% 3%; text-align: center; margin-right: 2%; background: #ffffff; border: 2px solid #cccccc; box-sizing: border-box;}
+.layer > div:last-child {margin-right: 0;}
+.layer > div img {width: 100px; padding: 20px 0;}
+.layer > div ul li {text-align: left; padding-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.layer > div .more {position: absolute; right: 20px; top: 20px; border: 1px solid #cccccc; border-radius: 50%; width: 15px; height: 15px;}
+
+/*footer*/
+#footer {padding: 10px; box-sizing: border-box; margin-top: 20px;}
+#footer h2 {float: left;}
+#footer h2 img {width: 80px;}
+#footer address {float: left; font-style: normal; padding: 20px 0 0 20px;}
+#footer .sns {float: right; margin-top: 20px;}
+#footer .sns ul {overflow: hidden;}
+#footer .sns ul li {float: left; padding-bottom: 5px;}
+#footer .sns ul li img {width: 60px;}

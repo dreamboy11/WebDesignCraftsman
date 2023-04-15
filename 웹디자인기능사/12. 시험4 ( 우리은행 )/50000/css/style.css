@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/*reset*/
+* {margin: 0; padding: 0;}
+a {color: #333333; text-decoration: none;}
+li {list-style: none;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/*layout*/
+#wrap {width: 1200px; margin: 0 auto;}
+#header {height: 100px;}
+#banner {height: 300px;}
+#contents {height: 200px;}
+#footer {height: 100px;}
+
+/*header*/
+#header h1 {float: left; margin-top: 25px;}
+#header h1 img {width: 200px;}
+#header .nav {float: right;}
+#header .nav ul {margin-top: 20px;}
+#header .nav ul li {position: relative; float: left; padding: 20px 40px;}
+#header .nav ul li a {display: block; font-size: 20px; font-weight: bold; text-align: center; transition: 0.3s;}
+#header .nav ul li a:hover {background: #0076be; color: #ffffff;}
+#header .nav ul li ul.submenu {display: none; position: absolute; left: -5px; top: 40px; background: #ffffff; width: 200px; height: 260px; line-height: 30px; z-index: 100;}
+#header .nav ul li ul.submenu li {padding: 20px 40px;}
+#header .nav ul li ul.submenu li a {display: block; font-size: 12px; transition: 0.3s;}
+#header .nav ul li ul.submenu li a:hover {background: #e66b27; color: #ffffff;}
+
+/*banner*/
+#banner {height: 300px; overflow: hidden;}
+#banner img {display: block; width: 100%;}
+
+/*slideList*/
+.slideList {width: 3600px; position: relative;}
+.slideList .slideImg {position: relative; width: 1200px; float: left;}
+.slideList .slideImg h2 {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(0, 0, 0, 0.8); color: #ffffff; border-radius: 25px; padding: 10px 30px;}
+
+/*contents*/
+#contents .notice {float: left; width: 32.3333%; margin-right: 1%;}
+#contents .link {float: left; width: 32.3333%; margin-right: 1%;}
+#contents .short {float: left; width: 32.3333%; margin-right: 1%;}
+
+/*notice*/
+.notice {position: relative; float: left; padding-top: 15px;}
+.notice ul {position: relative;}
+.notice ul li {float: left; margin-right: 20px;}
+.notice ul li a {font-size: 18px; font-weight: bold; margin-right: 5px; color: #333333;}
+.notice ul li a.active {transition: 0.3s;}
+.notice ul li a.active:hover {color: #0076be; font-weight: bold;}
+.notice ul li a.layers {transition: 0.3s;}
+.notice ul li a.layers:hover {color: #e66b27; font-weight: bold;}
+.notice ul li ul {position: absolute; right: 0; top: 0;}
+.notice ul li ul.gallery {display: none; position: absolute; left: 0; top: 40px; background: #ffffff; width: 100%; height: 150px;}
+.notice ul li ul li {float: left; padding-top: 30px; padding-left: 5px;}
+.notice ul li ul li a {font-size: 12px; font-weight: normal;}
+.notice ul li ul li img {width: 110px;}
+.notice ul li ul li span {font-size: 8px;}
+
+/*link*/
+.link {padding-top: 30px;}
+.link ul {}
+.link ul li {float: left; width: 48%; margin-right: 2%;}
+.link ul li a {display: block; text-align: center;}
+.link ul li img {width: 120px;}
+.link ul li span {display: block; margin-top: 10px;}
+
+/*short*/
+.short {padding-top: 30px;}
+.short ul {padding-left: 80px; text-align: center;}
+.short ul li {float: left; width: 20%; margin-right: 5%; padding-bottom: 30px;}
+.short ul li:nth-child(2) {margin-right: 130px;}
+.short ul li a {display: block;}
+.short ul li img {width: 60px; padding-bottom: 10px;}
+.short ul li span {display: block; font-size: 10px;}
+
+/*footer*/
+#footer .logo {float: left;}
+#footer .logo h2 {}
+#footer .logo h2 img {width: 180px;}
+#footer .foot {float: left; margin-left: 250px;}
+#footer .foot ul {}
+#footer .foot ul li {float: left; margin-right: 20px;}
+#footer .foot ul li a {}
+#footer .foot address {width: 70%; font-style: normal; line-height: 50px;}
+
+/*layer*/
+.layer {display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #ffffff; border: 2px solid #000000; width: 500px; height: 500px; padding: 10px 30px;}
+.layer h2 {padding: 50px; font-size: 30px; font-weight: bold; color: #0076be; text-align: center;}
+.layer p {padding: 20px 50px; line-height: 40px;}
+.layer .close {position: absolute; bottom: 20px; right: 20px; font-size: 20px;}
